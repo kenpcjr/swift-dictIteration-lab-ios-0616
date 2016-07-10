@@ -18,7 +18,10 @@
  */
 // write your code here
 
-
+var artistsAndBestSellingAlbums = ["Nirvana" : "Nevermind",
+                                   "Blondie" : "Parallel Lines",
+                                   "The Kinks" : "Low Budget",
+                                   "The Beatles" : "Sgt. Pepper's Lonely Hearts Club Band"]
 
 
 /*: question2
@@ -26,7 +29,7 @@
  */
 // write your code here
 
-
+artistsAndBestSellingAlbums["Pixies"] = "Doolittle"
 
 
 /*: question3
@@ -35,7 +38,7 @@
 // write your code here
 
 
-
+artistsAndBestSellingAlbums["The Kinks"] = nil
 
 
 /*: question4
@@ -44,7 +47,9 @@
 let bandName = "Nirvana"
 // write your code here
 
-
+if let album = artistsAndBestSellingAlbums[bandName]{
+    print("\(bandName)'s top selling album was \(album)")
+}
 
 
 /*: question5
@@ -52,21 +57,23 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (band, album) in artistsAndBestSellingAlbums{
+    print("\(band)'s top selling album was \(album)")
+}
 
 
 /*: question6
  ### 6. What type of data structure is returned when you iterate over a dictionary?
  */
 
-
+//A Tuple
 
 
 /*: question7
  ### 7. Imagine every student in every grade in a high school took an exam. Each student got a letter grade based on their test results (A, B, C, D, and F). The results were averaged together per grade. How could you represent this mapping of grades to exam average?
  */
 
-
+// A dictionary where the class is the key and the value is the grade.
 
 
 /*: question8
@@ -79,7 +86,10 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+let grades = [9 : "B",
+              10 : "A",
+              11 : "C",
+              12 : "B"]
 
 
 /*: question9
@@ -87,7 +97,9 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (classLevel, grade) in grades {
+    print("Grade \(classLevel) got \(grade)")
+}
 
 
 /*: question10
@@ -95,7 +107,11 @@ let bandName = "Nirvana"
  */
 // write your code here
 
-
+for (classLevel, grade) in grades {
+    if grade == "A" {
+        print("Grade \(classLevel) got the highest score with a grade of \(grade)!")
+    }
+}
 
 
 /*:
